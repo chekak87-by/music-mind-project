@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
             <li><a href="test.html">Восприимчивость</a></li>
             <li><a href="psychotype.html">Психотип</a></li>
             <li><a href="facts.html">Факты</a></li>
-            <a href="relax.html">Релакс</a>
+            <li><a href="relax.html">Релакс</a></li>
         </ul>
     </nav>
 
@@ -36,19 +36,22 @@
                     <h3>Белый шум</h3>
                     <p>Содержит все частоты. Помогает сосредоточиться и маскирует посторонние звуки.</p>
                     <button class="play-btn" onclick="playAudio('white-noise')">▶ Слушать</button>
-                    <audio id="white-noise" src="audio/white.mp3"></audio>
+                    <!-- Исправлен путь к файлу -->
+                    <audio id="white-noise" src="white.mp3"></audio>
                 </div>
                 <div class="noise-card">
                     <h3>Розовый шум</h3>
                     <p>Более глубокий и мягкий. Снижает мозговую активность, подготавливая ко сну.</p>
                     <button class="play-btn" onclick="playAudio('pink-noise')">▶ Слушать</button>
-                    <audio id="pink-noise" src="audio/pink.mp3"></audio>
+                    <!-- Исправлен путь к файлу -->
+                    <audio id="pink-noise" src="pink.mp3"></audio>
                 </div>
                 <div class="noise-card">
                     <h3>Коричневый шум</h3>
                     <p>Фокус на низких частотах. Полезен для глубокого расслабления.</p>
                     <button class="play-btn" onclick="playAudio('brown-noise')">▶ Слушать</button>
-                    <audio id="brown-noise" src="audio/brown.mp3"></audio>
+                    <!-- Исправлен путь к файлу -->
+                    <audio id="brown-noise" src="brown.mp3"></audio>
                 </div>
             </div>
         </section>
