@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жанры и Влияние</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Музыка & Разум</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="genres.html" class="active">Жанры и Влияние</a></li>
+            <li><a href="test.html">Восприимчивость</a></li>
+            <li><a href="psychotype.html">Психотип</a></li>
+            <li><a href="facts.html">Факты</a></li>
+            <a href="relax.html">Релакс</a>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="genres-section">
+            <h2>Эволюция музыкальных жанров</h2>
+            <p class="subtitle">Выберите жанр, чтобы исследовать его историю и влияние на психику</p>
+
+            <div class="genres-panel">
+                <button class="genre-btn" style="--btn-color: #4A90E2;" onclick="loadGenre('classic', '#4A90E2', this)">Классическая музыка</button>
+                <button class="genre-btn" style="--btn-color: #E24A4A;" onclick="loadGenre('rock', '#E24A4A', this)">Рок</button>
+                <button class="genre-btn" style="--btn-color: #E24A9B;" onclick="loadGenre('pop', '#E24A9B', this)">Поп</button>
+                <button class="genre-btn" style="--btn-color: #E29B4A;" onclick="loadGenre('jazz', '#E29B4A', this)">Джаз</button>
+                <button class="genre-btn" style="--btn-color: #4AE2C0;" onclick="loadGenre('electronic', '#4AE2C0', this)">Электроника</button>
+            </div>
+
+            <div id="timeline-container" class="hidden">
+                <button class="close-timeline-btn" onclick="closeTimeline()">✖ Закрыть таймлайн</button>
+
+                <div id="timeline-track" class="timeline-track"></div>
+                
+                <div id="info-display" class="info-card">
+                    <h3 id="info-year">Год</h3>
+                    <h4 id="info-title">Событие</h4>
+                    <p id="info-desc">Описание события...</p>
+                    
+                    <div class="audio-player">
+                        <p id="info-track-name">Название композиции</p>
+                        <audio id="info-audio" controls></audio>
+                    </div>
+
+                    <div class="psycho-impact">
+                        <h4>🧠 Влияние на психику:</h4>
+                        <p id="info-impact">Описание влияния...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Музыка & Разум</h3>
+            <p>Школьный проект по теме: «Влияние музыки на психоэмоциональное состояние человека»</p>
+            <p>Усенко М.М.</p>
+            <p class="copyright">© 2026. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

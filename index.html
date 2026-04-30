@@ -1,0 +1,110 @@
+\<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Влияние музыки на психику</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Музыка & Разум</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="genres.html">Жанры и Влияние</a></li>
+            <li><a href="test.html">Восприимчивость</a></li>
+            <li><a href="psychotype.html">Психотип</a></li>
+            <li><a href="facts.html">Факты</a></li>
+            <a href="relax.html">Релакс</a>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Как музыка меняет наше сознание?</h1>
+                <p>Исследуйте влияние звуковых волн и музыкальных жанров на психоэмоциональное состояние человека.</p>
+                <button class="btn-primary" onclick="window.location.href='genres.html'">Начать исследование</button>
+            </div>
+        </header>
+
+        <section class="noises-section">
+            <h2>Природа звука: Шумы</h2>
+            <div class="noises-grid">
+                <div class="noise-card">
+                    <h3>Белый шум</h3>
+                    <p>Содержит все частоты. Помогает сосредоточиться и маскирует посторонние звуки.</p>
+                    <button class="play-btn" onclick="playAudio('white-noise')">▶ Слушать</button>
+                    <audio id="white-noise" src="audio/white.mp3"></audio>
+                </div>
+                <div class="noise-card">
+                    <h3>Розовый шум</h3>
+                    <p>Более глубокий и мягкий. Снижает мозговую активность, подготавливая ко сну.</p>
+                    <button class="play-btn" onclick="playAudio('pink-noise')">▶ Слушать</button>
+                    <audio id="pink-noise" src="audio/pink.mp3"></audio>
+                </div>
+                <div class="noise-card">
+                    <h3>Коричневый шум</h3>
+                    <p>Фокус на низких частотах. Полезен для глубокого расслабления.</p>
+                    <button class="play-btn" onclick="playAudio('brown-noise')">▶ Слушать</button>
+                    <audio id="brown-noise" src="audio/brown.mp3"></audio>
+                </div>
+            </div>
+        </section>
+
+        <section class="brain-impact-section">
+            <h2>Как музыка физически влияет на мозг?</h2>
+            <p class="subtitle">Это не просто магия звука, это чистая химия и нейробиология.</p>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="icon">💊</div>
+                    <h3>Гормоны счастья</h3>
+                    <p>Прослушивание любимых треков вызывает резкий выброс дофамина и эндорфинов. Это те же нейромедиаторы, которые вырабатываются при поедании шоколада.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">📉</div>
+                    <h3>Снижение стресса</h3>
+                    <p>Спокойная, ритмичная музыка значительно снижает выработку кортизола (гормона стресса). Она буквально замедляет пульс и нормализует давление.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">⚡</div>
+                    <h3>Активация нейронов</h3>
+                    <p>Прослушивание сложной музыки активирует одновременно оба полушария мозга, улучшая память и нейропластичность.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Музыка & Разум</h3>
+            <p>Школьный проект по теме: «Влияние музыки на психоэмоциональное состояние человека»</p>
+            <p>Усенко М.М.</p>
+            <p class="copyright">© 2026. Все права защищены.</p>
+        </div>
+    </footer>
+
+   <script>
+        function playAudio(id) {
+            const audio = document.getElementById(id);
+            // Находим кнопку, которая относится к этому аудио (она находится перед аудиотегом)
+            const btn = audio.previousElementSibling; 
+
+            if (audio.paused) {
+                // Если на паузе - включаем и меняем текст
+                audio.play();
+                btn.innerHTML = "⏸ Пауза";
+                btn.style.background = "var(--accent-color)";
+                btn.style.color = "white";
+            } else {
+                // Если играет - ставим на паузу и возвращаем исходный вид
+                audio.pause();
+                btn.innerHTML = "▶ Слушать";
+                btn.style.background = "transparent";
+                btn.style.color = "var(--accent-color)";
+            }
+        }
+    </script>
+</body>
+</html>

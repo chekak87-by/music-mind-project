@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой музыкальный психотип</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Музыка & Разум</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="genres.html">Жанры и Влияние</a></li>
+            <li><a href="test.html">Восприимчивость</a></li>
+            <li><a href="psychotype.html" class="active">Психотип</a></li>
+            <li><a href="facts.html">Факты</a></li>
+            <a href="relax.html">Релакс</a>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="test-section">
+            <h2>Кто ты в мире музыки?</h2>
+            <p class="subtitle" id="psycho-progress">Вопрос 1 из 32</p>
+
+            <div class="test-container" id="psycho-quiz-container">
+                </div>
+
+            <button class="btn-primary" id="next-psycho-btn" onclick="nextPsychoQuestion()" style="margin: 30px auto; display: block;">Далее</button>
+
+            <div id="psycho-result-box" class="info-card hidden">
+                <h3 id="psycho-result-title">Твой психотип</h3>
+                <p id="psycho-result-text"></p>
+                <button class="btn-primary" onclick="window.location.reload()" style="margin-top: 20px;">Пройти заново</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="psychotype-script.js"></script>
+</body>
+</html>

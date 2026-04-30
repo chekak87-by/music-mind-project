@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комната релаксации | 60 BPM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar dark-navbar">
+        <div class="logo">Музыка & Разум</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="genres.html">Жанры и Влияние</a></li>
+            <li><a href="test.html">Восприимчивость</a></li>
+            <li><a href="psychotype.html">Психотип</a></li>
+            <li><a href="facts.html">Факты</a></li>
+            <li><a href="relax.html" class="active">Релакс</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content relax-main">
+        <section class="relax-section">
+            <div class="relax-header">
+                <h2>Практика 60 BPM</h2>
+                <p>Научный подход к снижению стресса. Сядьте удобно, наденьте наушники и дышите в такт со сферой. Музыка с ритмом 60 ударов в минуту принудительно синхронизирует ваше сердцебиение, возвращая нервную систему в состояние покоя.</p>
+            </div>
+
+            <div class="relax-container">
+                <div class="breathing-circle" id="b-circle">
+                    <span id="breathe-text">Готовы?</span>
+                </div>
+            </div>
+
+            <div class="relax-controls">
+                <button class="btn-primary relax-btn" id="start-relax-btn" onclick="startRelaxation()">▶ Начать сеанс</button>
+                <audio id="relax-audio" src="audio/relax.mp3" loop></audio>
+            </div>
+        </section>
+    </main>
+
+    <script src="relax-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-код проекта</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        /* Сбрасываем базовые отступы */
+        body, html { margin: 0; padding: 0; height: 100%; }
+
+        /* Темный премиальный фон, как в комнате релаксации */
+        .qr-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Возвращаем аккуратную строгую карточку, но в темном стиле */
+        .qr-card {
+            background: #1e293b;
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 2px solid #818cf8; /* Наш фирменный лавандовый из темной темы */
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .qr-card h2 {
+            color: #e2e8f0; /* Светлый текст */
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+
+        .qr-subtitle {
+            color: #94a3b8; /* Серо-синий текст */
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        /* Контейнер QR-кода: ОН ДОЛЖЕН БЫТЬ БЕЛЫМ для идеального сканирования */
+        #qrcode {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        .author-name {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #818cf8; /* Лавандовый акцент */
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="qr-wrapper">
+        <div class="qr-card">
+            <h2>Музыка & Разум</h2>
+            <p class="qr-subtitle">Наведите камеру, чтобы открыть проект</p>
+            
+            <div id="qrcode"></div>
+            
+            <div class="author-name">Усенко М.М.</div>
+        </div>
+    </div>
+
+    <script>
+        // ВНИМАНИЕ: Вставь свою ссылку от Netlify
+        const myWebsiteURL = "https://music-project-usenko.netlify.app/";
+
+        new QRCode(document.getElementById("qrcode"), {
+            text: myWebsiteURL,
+            width: 240, 
+            height: 240,
+            colorDark : "#0f172a",  // Очень темный сине-черный (идеально для камеры)
+            colorLight : "#ffffff", // Белый фон внутри квадрата
+            correctLevel : QRCode.CorrectLevel.M 
+        });
+    </script>
+</body>
+</html>

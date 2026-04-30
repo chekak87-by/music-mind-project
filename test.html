@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психотесты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Музыка & Разум</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="genres.html">Жанры и Влияние</a></li>
+            <li><a href="test.html" class="active">Восприимчивость</a></li>
+            <li><a href="psychotype.html">Психотип</a></li>
+            <li><a href="facts.html">Факты</a></li>
+            <a href="relax.html">Релакс</a>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="test-section">
+            <h2>Насколько ты восприимчив к музыке?</h2>
+            <p class="subtitle" id="test-progress">Вопрос 1 из 32</p>
+
+            <div class="test-container" id="quiz-container">
+                </div>
+
+            <button class="btn-primary" id="next-btn" onclick="nextQuestion()" style="margin: 30px auto; display: block;">Далее</button>
+
+            <div id="result-box" class="info-card hidden">
+                <h3 id="result-title">Твой результат</h3>
+                <p id="result-text"></p>
+                <button class="btn-primary" onclick="window.location.reload()" style="margin-top: 20px;">Пройти заново</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="test-script.js"></script>
+</body>
+</html>
